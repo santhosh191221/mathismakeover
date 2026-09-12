@@ -11,21 +11,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --onyx:#0c0a08;
-    --onyx-2:#161009;
-    --onyx-3:#1f160d;
-    --gold:#c9a24b;
-    --gold-bright:#e9cd82;
-    --gold-dim:#8a6d33;
-    --ivory:#f6eee1;
-    --ivory-2:#eee2cd;
-    --wine:#5e1a2e;
-    --wine-bright:#7c2740;
-    --ink:#241c14;
-    --ink-soft:#5a4c3b;
+    --onyx:#33060d;
+    --onyx-2:#45111a;
+    --onyx-3:#572030;
+    --gold:#be8a4a;
+    --gold-bright:#e7c583;
+    --gold-dim:#8c6a3a;
+    --ivory:#fbf6ec;
+    --ivory-2:#f1e4d3;
+    --wine:#711a26;
+    --wine-bright:#8f2333;
+    --rose:#de9f95;
+    --ink:#231d1a;
+    --ink-soft:#5c4a3e;
     --serif:'Cormorant Garamond', Georgia, serif;
     --sans:'Jost', 'Helvetica Neue', Arial, sans-serif;
-    --edge: 1px solid rgba(201,162,75,0.35);
+    --edge: 1px solid rgba(190,138,74,0.35);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -68,10 +69,10 @@
     border-bottom:1px solid transparent;
   }
   header.solid{
-    background:rgba(12,10,8,0.92);
+    background:rgba(51,6,13,0.92);
     backdrop-filter:blur(6px);
     padding:0.75rem 0;
-    border-bottom:1px solid rgba(201,162,75,0.25);
+    border-bottom:1px solid rgba(190,138,74,0.25);
   }
   header .bar{
     display:flex;align-items:center;justify-content:space-between;
@@ -123,8 +124,8 @@
   /* ---------- hero ---------- */
   .hero{
     background:
-      radial-gradient(60% 55% at 78% 38%, rgba(201,162,75,0.16), transparent 70%),
-      linear-gradient(180deg, var(--onyx) 0%, #0a0806 100%);
+      radial-gradient(60% 55% at 78% 38%, rgba(190,138,74,0.16), transparent 70%),
+      linear-gradient(180deg, var(--onyx) 0%, #1c0308 100%);
     min-height:100vh;
     display:flex;align-items:center;
     padding-top:6rem;
@@ -144,6 +145,14 @@
     font-style:italic;
     color:var(--gold-bright);
     margin-bottom:1rem;
+  }
+  .hero-copy p.tagline{
+    font-family:var(--sans);
+    font-size:.75rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--rose);
+    margin:-0.6rem 0 1.6rem;
   }
   .hero-copy h1{
     color:var(--ivory);
@@ -189,10 +198,10 @@
   .hero-mark .ring{
     position:absolute;
     width:min(78vw, 480px);height:min(78vw, 480px);
-    border:1px solid rgba(201,162,75,0.28);
+    border:1px solid rgba(190,138,74,0.28);
     border-radius:50%;
   }
-  .hero-mark .ring.r2{width:min(66vw, 400px);height:min(66vw, 400px);border-color:rgba(201,162,75,0.16);}
+  .hero-mark .ring.r2{width:min(66vw, 400px);height:min(66vw, 400px);border-color:rgba(190,138,74,0.16);}
   .hero-mark img{
     width:min(58vw, 340px);
     position:relative;
@@ -233,7 +242,7 @@
     background:linear-gradient(90deg, transparent, var(--gold-dim) 20%, var(--gold-dim) 80%, transparent);
     margin:3rem 0;
   }
-  .on-onyx .rule{background:linear-gradient(90deg, transparent, rgba(201,162,75,0.5) 20%, rgba(201,162,75,0.5) 80%, transparent);}
+  .on-onyx .rule{background:linear-gradient(90deg, transparent, rgba(190,138,74,0.5) 20%, rgba(190,138,74,0.5) 80%, transparent);}
 
   .sprig{display:flex;justify-content:center;margin:0 0 2.5rem;opacity:.85;}
 
@@ -245,13 +254,20 @@
     aspect-ratio:1/1.05;
     border:var(--edge);
     display:flex;align-items:center;justify-content:center;
-    background:radial-gradient(circle at 50% 40%, rgba(201,162,75,0.10), transparent 65%);
+    background:radial-gradient(circle at 50% 40%, rgba(222,159,149,0.22), transparent 65%);
     position:relative;
   }
   .story-art svg{width:62%;height:62%;}
   .story h2{margin-bottom:1.4rem;}
   .story p{font-size:1.08rem;line-height:1.85;color:var(--ink-soft);max-width:34rem;}
   .story p + p{margin-top:1.1rem;}
+  .story-mission{
+    font-family:var(--serif) !important;
+    font-style:italic;
+    color:var(--wine) !important;
+    font-size:1.25rem !important;
+    line-height:1.6 !important;
+  }
 
   /* ---------- services (editorial rows) ---------- */
   .service-row{
@@ -286,7 +302,7 @@
   .menu-row{
     display:flex;justify-content:space-between;gap:1.5rem;
     padding:1.5rem 0;
-    border-bottom:1px solid rgba(201,162,75,0.22);
+    border-bottom:1px solid rgba(190,138,74,0.22);
   }
   .menu-row:last-child{border-bottom:none;}
   .menu-row .m-name{font-family:var(--serif);font-size:1.45rem;color:var(--gold-bright);}
@@ -313,7 +329,7 @@
     display:block;margin-top:1.4rem;font-style:normal;font-size:.85rem;color:var(--gold-bright);letter-spacing:.03em;
   }
   .quote-nav{display:flex;justify-content:center;gap:.6rem;margin-top:2.6rem;}
-  .quote-dot{width:7px;height:7px;border-radius:50%;background:rgba(201,162,75,0.35);border:none;cursor:pointer;padding:0;}
+  .quote-dot{width:7px;height:7px;border-radius:50%;background:rgba(190,138,74,0.35);border:none;cursor:pointer;padding:0;}
   .quote-dot.active{background:var(--gold-bright);}
 
   /* ---------- contact ---------- */
@@ -324,7 +340,7 @@
   .field input, .field select, .field textarea{
     width:100%;
     background:transparent;
-    border:none;border-bottom:1px solid rgba(201,162,75,0.5);
+    border:none;border-bottom:1px solid rgba(190,138,74,0.5);
     color:var(--ink);
     font-family:var(--sans);font-size:1rem;
     padding:.6rem 0;
@@ -344,12 +360,12 @@
   }
   .details dt:first-child{margin-top:0;}
   .details dd{margin:.4rem 0 0;font-size:1rem;color:var(--ink-soft);line-height:1.6;}
-  .details{border-left:1px solid rgba(201,162,75,0.4);padding-left:clamp(1.5rem,3vw,2.5rem);}
+  .details{border-left:1px solid rgba(190,138,74,0.4);padding-left:clamp(1.5rem,3vw,2.5rem);}
 
   form small{display:block;margin-top:1rem;color:var(--ink-soft);font-size:.8rem;}
 
   /* ---------- footer ---------- */
-  footer{background:var(--onyx);border-top:1px solid rgba(201,162,75,0.18);padding:2.6rem 0;}
+  footer{background:var(--onyx);border-top:1px solid rgba(190,138,74,0.18);padding:2.6rem 0;}
   footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
   footer .brandmark{font-size:1.15rem;}
   footer .foot-links{display:flex;gap:1.6rem;}
@@ -362,7 +378,7 @@
     nav.links{
       position:fixed;top:0;right:0;bottom:0;
       width:min(78vw,320px);
-      background:rgba(10,8,6,0.98);
+      background:rgba(51,6,13,0.98);
       flex-direction:column;
       align-items:flex-start;
       justify-content:center;
@@ -370,7 +386,7 @@
       padding:2rem 2.4rem;
       transform:translateX(100%);
       transition:transform .35s ease;
-      border-left:1px solid rgba(201,162,75,0.25);
+      border-left:1px solid rgba(190,138,74,0.25);
     }
     nav.links.open{transform:translateX(0);}
     .menu-toggle{display:block;}
@@ -385,7 +401,7 @@
     .service-price{text-align:left;}
     .experience-grid{grid-template-columns:1fr 1fr;}
     .contact .wrap{grid-template-columns:1fr;}
-    .details{border-left:none;padding-left:0;border-top:1px solid rgba(201,162,75,0.25);padding-top:1.8rem;margin-top:.5rem;}
+    .details{border-left:none;padding-left:0;border-top:1px solid rgba(190,138,74,0.25);padding-top:1.8rem;margin-top:.5rem;}
     .row-2{grid-template-columns:1fr;}
     footer .wrap{justify-content:center;text-align:center;}
   }
@@ -423,6 +439,7 @@
   <div class="wrap">
     <div class="hero-copy">
       <p class="lede">Mathis Makeover Studio</p>
+      <p class="tagline">Beauty begins with you</p>
       <h1>Made over.<br>Made yours.</h1>
       <p class="sub">Bridal artistry, hair transformations, and full studio care &mdash; for the days you want to feel unmistakably like yourself, only more so. Real consultations, skin-first prep, and a chair that isn't rushed.</p>
       <div class="hero-actions">
@@ -442,18 +459,20 @@
   <div class="wrap">
     <div class="story-art">
       <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="100" r="92" stroke="#c9a24b" stroke-width="1"/>
-        <circle cx="100" cy="100" r="80" stroke="#c9a24b" stroke-width="1" stroke-opacity="0.55"/>
-        <path d="M60 150 Q60 90 100 70 Q140 90 140 150" stroke="#c9a24b" stroke-width="1.4"/>
-        <path d="M100 70 L100 40" stroke="#c9a24b" stroke-width="1.4"/>
-        <path d="M78 55 Q100 30 122 55 Q118 45 100 48 Q82 45 78 55Z" fill="#c9a24b" fill-opacity="0.85"/>
+        <circle cx="100" cy="100" r="92" stroke="#be8a4a" stroke-width="1"/>
+        <circle cx="100" cy="100" r="80" stroke="#be8a4a" stroke-width="1" stroke-opacity="0.55"/>
+        <path d="M60 150 Q60 90 100 70 Q140 90 140 150" stroke="#be8a4a" stroke-width="1.4"/>
+        <path d="M100 70 L100 40" stroke="#be8a4a" stroke-width="1.4"/>
+        <path d="M78 55 Q100 30 122 55 Q118 45 100 48 Q82 45 78 55Z" fill="#be8a4a" fill-opacity="0.85"/>
       </svg>
     </div>
     <div>
-      <p class="kicker">The studio</p>
-      <h2>A good makeover doesn&rsquo;t hide a face &mdash; it reveals one.</h2>
-      <p style="margin-top:1.6rem;">Mathis was built around a simple idea: the best version of you isn&rsquo;t a different person. It&rsquo;s the one who shows up when the skin is prepped properly, the shade actually matches, and nobody's rushing you out of the chair.</p>
-      <p>Every bride, every bridesmaid, every Tuesday-afternoon touch-up gets the same unhurried attention &mdash; a real conversation first, then artistry built around what suits you, not what's trending on a reel this week.</p>
+      <p class="kicker">About Mathis</p>
+      <h2>More than a studio. A place to feel your best.</h2>
+      <p style="margin-top:1.6rem;">Mathis Makeover Studio brings together artistry, precision, and genuine care under one roof. From the first conversation to the final touch, every detail is thoughtfully considered to complement your features and occasion.</p>
+      <p>Founded with a passion for refined makeup, hairstyling, nail artistry, and beauty care, Mathis is where timeless techniques meet modern elegance.</p>
+      <p>Whether it&rsquo;s your wedding day, a celebration, or simply a day for yourself, our aim is simple:</p>
+      <p class="story-mission">To help you walk out feeling confident, polished, and unmistakably you.</p>
     </div>
   </div>
 </section>
@@ -553,7 +572,7 @@
 <section class="on-wine" id="reviews">
   <div class="wrap">
     <div class="quote-block" id="quote-block">
-      <svg viewBox="0 0 44 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 32V19.4C0 8.6 6.4 1.6 17.3 0L19 4.7C12.9 6.4 9.6 10.4 9.6 15.4H18V32H0ZM26 32V19.4C26 8.6 32.4 1.6 43.3 0L45 4.7C38.9 6.4 35.6 10.4 35.6 15.4H44V32H26Z" fill="#F6EEE1" fill-opacity="0.85"/></svg>
+      <svg viewBox="0 0 44 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 32V19.4C0 8.6 6.4 1.6 17.3 0L19 4.7C12.9 6.4 9.6 10.4 9.6 15.4H18V32H0ZM26 32V19.4C26 8.6 32.4 1.6 43.3 0L45 4.7C38.9 6.4 35.6 10.4 35.6 15.4H44V32H26Z" fill="#F3DAD5" fill-opacity="0.9"/></svg>
       <blockquote id="quote-text">My sister didn't recognise me at my own engagement &mdash; in the best way.</blockquote>
       <cite id="quote-cite">Divya &middot; engagement client</cite>
     </div>
@@ -607,9 +626,9 @@
     <div class="details">
       <dl>
         <dt>Studio</dt>
-        <dd>12 Anna Salai, Teynampet<br>Chennai, Tamil Nadu 600018</dd>
+        <dd><strong>Mathis Makeover Studio</strong><br>No. 172, Polipakkam Road, Banavaram<br>Ranipet District, Tamil Nadu &ndash; 632505</dd>
         <dt>Phone / WhatsApp</dt>
-        <dd>+91 98765 43210</dd>
+        <dd>+91 63698 21505</dd>
         <dt>Hours</dt>
         <dd>Tue&ndash;Sun, 10:00&nbsp;am &ndash; 8:00&nbsp;pm<br>Closed Mondays</dd>
         <dt>Instagram</dt>
@@ -688,7 +707,7 @@
     if(date) text += ` Preferred date: ${date}.`;
     if(message) text += ` Notes: ${message}.`;
     if(phone) text += ` My contact: ${phone}.`;
-    const studioNumber = "919876543210"; // replace with the studio's real WhatsApp number
+    const studioNumber = "916369821505"; // Mathis Makeover Studio's WhatsApp number
     window.open(`https://wa.me/${studioNumber}?text=${encodeURIComponent(text)}`, '_blank');
   });
 </script>
