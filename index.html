@@ -256,8 +256,15 @@
     display:flex;align-items:center;justify-content:center;
     background:radial-gradient(circle at 50% 40%, rgba(222,159,149,0.22), transparent 65%);
     position:relative;
+    overflow:hidden;
   }
   .story-art svg{width:62%;height:62%;}
+  .story-art img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
   .story h2{margin-bottom:1.4rem;}
   .story p{font-size:1.08rem;line-height:1.85;color:var(--ink-soft);max-width:34rem;}
   .story p + p{margin-top:1.1rem;}
@@ -527,13 +534,7 @@
 <section class="story" id="studio">
   <div class="wrap">
     <div class="story-art">
-      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="100" r="92" stroke="#be8a4a" stroke-width="1"/>
-        <circle cx="100" cy="100" r="80" stroke="#be8a4a" stroke-width="1" stroke-opacity="0.55"/>
-        <path d="M60 150 Q60 90 100 70 Q140 90 140 150" stroke="#be8a4a" stroke-width="1.4"/>
-        <path d="M100 70 L100 40" stroke="#be8a4a" stroke-width="1.4"/>
-        <path d="M78 55 Q100 30 122 55 Q118 45 100 48 Q82 45 78 55Z" fill="#be8a4a" fill-opacity="0.85"/>
-      </svg>
+      <img src="test.jpeg" alt="Mathis Makeover Studio portrait" />
     </div>
     <div>
       <p class="kicker">About Mathis</p>
